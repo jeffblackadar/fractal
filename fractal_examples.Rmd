@@ -34,8 +34,7 @@ plot_fractal_l(l_systems_row_num=7,l_systems_max_generation=4)
 l_systems_row_num <- 10
 l_systems_max_generation <- 3
 ```
-# Generation n = 
-`r (l_systems_max_generation)`
+# Generation n = `r (l_systems_max_generation)`
 ```{r}
 plot_fractal_l(l_systems_row_num=10,l_systems_max_generation=3)
 ```
