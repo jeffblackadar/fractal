@@ -1,8 +1,11 @@
 ---
 title: "L System Fractals in R using R6 classes."
-output:
-  html_document:
-    df_print: paged
+output: html_document
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 ---
 ## References
 Prusinkiewicz, Przemyslaw, and Aristid Lindenmayer. The Algorithmic Beauty of Plants. New York u.a: Springer, 1990.
@@ -770,33 +773,7 @@ plot_fractal_l(l_systems_row_num=3,l_systems_max_generation=4)
 ```{r}
 plot_fractal_l(l_systems_row_num=4,l_systems_max_generation=2)
 ```
-```{r}
-plot_fractal_l(l_systems_row_num=5,l_systems_max_generation=3)
-```
-```{r}
-plot_fractal_l(l_systems_row_num=6,l_systems_max_generation=4)
-```
 
-```{r}
-plot_fractal_l(l_systems_row_num=7,l_systems_max_generation=4)
-```
-```{r}
-plot_fractal_l(l_systems_row_num=8,l_systems_max_generation=4)
-```
-
-```{r}
-plot_fractal_l(l_systems_row_num=9,l_systems_max_generation=5)
-```
-
-```{r}
-l_systems_row_num <- 10
-l_systems_max_generation <- 3
-```
-# Generation n = 
-`r (l_systems_max_generation)`
-```{r}
-plot_fractal_l(l_systems_row_num=10,l_systems_max_generation=3)
-```
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
 
 When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
