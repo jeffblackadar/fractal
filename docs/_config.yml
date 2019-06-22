@@ -2,5 +2,4 @@ name: "fractal"
 output_dir: "docs"
 output:
   html_document:
-  theme: cosmo
 theme: jekyll-theme-leap-day

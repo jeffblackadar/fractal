@@ -4,8 +4,6 @@ navbar:
   title: "L System Fractals in R using R6 classes"
   left:  # you can also use 'right'
     - text: "Home"
-      icon: fa-home  # handy way to use FontAwesome icons in nav!
       href: index.html  # don't link to the .Rmd file
     - text: "Example"
-      icon: fa-newspaper-o
       href: examples_1.html
