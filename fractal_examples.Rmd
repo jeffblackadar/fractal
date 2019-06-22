@@ -1,0 +1,41 @@
+---
+title: "L System Fractals in R using R6 classes - Examples."
+output: html_document
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'examples_1.html'))})
+---
+```{r}
+source("fractal_l.R")
+```
+
+```{r}
+
+#plot_fractal_l(l_systems_row_num=5,l_systems_max_generation=3)
+```
+```{r}
+#plot_fractal_l(l_systems_row_num=6,l_systems_max_generation=4)
+```
+
+```{r}
+plot_fractal_l(l_systems_row_num=7,l_systems_max_generation=4)
+```
+```{r}
+#plot_fractal_l(l_systems_row_num=8,l_systems_max_generation=4)
+```
+
+```{r}
+#plot_fractal_l(l_systems_row_num=9,l_systems_max_generation=5)
+```
+
+```{r}
+l_systems_row_num <- 10
+l_systems_max_generation <- 3
+```
+# Generation n = 
+`r (l_systems_max_generation)`
+```{r}
+plot_fractal_l(l_systems_row_num=10,l_systems_max_generation=3)
+```
