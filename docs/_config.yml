@@ -1,12 +1,5 @@
 name: "fractal"
 output_dir: "docs"
-navbar:
-  title: "L System Fractals in R using R6 classes"
-  left:
-  - text: "Home"
-   href: index.html
-  - text: "Examples"
-   href: examples_1.html
 output:
   html_document:
  theme: cosmo
