@@ -19,16 +19,41 @@ Spannbauer, Adam. OOP Fractal Trees in R with R6, ggplot2, & gganimate (part 1) 
  
 ```
 
-```{r}
-plot_fractal_l(l_systems_row_num=15,l_systems_max_generation=4)
 
-
+```{r include=FALSE}
+row_num <- 15
+max_generation <- 4
+```
+# Koch Snowflake
+##### Generation n = `r (max_generation)`
+##### Angle = `r (l_systems$l_angles[row_num])`
+##### Initiator = `r (l_systems$l_initiators[row_num])`
+##### Generators = `r (l_systems$l_F_generators[row_num])`
+##### `r (l_systems$l_names[row_num])`
+ `r (l_systems$l_f_generators[row_num])`
+```{r echo=FALSE}
+plot_fractal_l(l_systems_row_num=row_num,l_systems_max_generation=max_generation)
 ```
 
-```{r}
-plot_fractal_l(l_systems_row_num=16,l_systems_max_generation=6)
 
+
+```{r include=FALSE}
+row_num <- 16
+max_generation <- 8
 ```
+# Tree
+##### Generation n = `r (max_generation)`
+##### Angle = `r (l_systems$l_angles[row_num])`
+##### Initiator = `r (l_systems$l_initiators[row_num])`
+##### Generators = `r (l_systems$l_F_generators[row_num])`
+##### `r (l_systems$l_names[row_num])`
+ `r (l_systems$l_f_generators[row_num])`
+```{r echo=FALSE}
+plot_fractal_l(l_systems_row_num=row_num,l_systems_max_generation=max_generation)
+```
+
+
+
 ```{r}
 #plot_fractal_l(l_systems_row_num=1,l_systems_max_generation=1)
 ```

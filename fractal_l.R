@@ -16,13 +16,11 @@ line_base = R6Class(
     type = NA_character_,
     id = NA_character_,
     line_color = NA_character_,
-    line_width = NA_real_,
-    
+
     
     initialize = function(x,
                           y,
                           len = 5,
-                          line_width = 2,
                           theta = 90,
                           type = NA_character_,
                           line_color = '#000000') {
@@ -37,7 +35,6 @@ line_base = R6Class(
       self$type = type
       self$id = uuid::UUIDgenerate()
       self$line_color = line_color
-      self$line_width = line_width
     } #initialize
   ),
   # public
@@ -52,8 +49,7 @@ line_base = R6Class(
         y = y,
         type = self$type,
         id = self$id,
-        line_color = self$line_color,
-        line_width = self$line_width
+        line_color = self$line_color
       )
     }
   )  # active
@@ -73,10 +69,6 @@ fractal_l_generate = R6Class(
     line_length = NA_character_,
     length_decay = NA_real_,
     min_length = NA_real_,
-    line_width = NA_character_,
-    width_decay = NA_real_,
-    min_width = NA_real_,
-    line_colors = list(),
     fractal_lines = data.frame(),
     type = NA_character_,
     initiator = NA_character_,
@@ -92,10 +84,6 @@ fractal_l_generate = R6Class(
                           line_length = 10,
                           length_decay = 1,
                           min_length = .25,
-                          line_width = 2,
-                          width_decay = 1,
-                          min_width = .25,
-                          line_colors = c("#000000"),
                           fractal_lines = data.frame(),
                           type = "",
                           initiator = "",
@@ -110,11 +98,7 @@ fractal_l_generate = R6Class(
       self$line_length = line_length
       self$length_decay = length_decay
       self$min_length = min_length
-      self$line_width = line_width
-      self$min_width = min_width
-      self$width_decay = width_decay
       
-      self$line_colors = line_colors
       self$type = type
       self$initiator <- initiator
       self$generators <- generators
@@ -132,15 +116,7 @@ fractal_l_generate = R6Class(
       }
       
       generation_line_color <- "#000000"
-      if(length(self$line_colors)<self$generation_current){
-        #use the highest color available
-        generation_line_color <- paste0(self$line_colors[length(self$line_colors)])
-      }else{
-        generation_line_color <- paste0(self$line_colors[self$generation_current])
-      }
-      generation_line_color <- "#000000"
-      
-      
+
       for (i in 1:nchar(fractal_instruction_line)) {
         fractal_instruction_char <- substr(fractal_instruction_line, i, i)
         
@@ -153,7 +129,6 @@ fractal_l_generate = R6Class(
                 self$start_x,
                 self$start_y,
                 self$line_length,
-                self$line_width,
                 self$angle_current,
                 self$type,
                 generation_line_color
@@ -177,10 +152,6 @@ fractal_l_generate = R6Class(
                 line_length = self$line_length,
                 length_decay = self$length_decay,
                 min_length = self$min_length,
-                line_width = self$line_width,
-                width_decay = self$width_decay,
-                min_width = self$min_width,
-                line_colors = self$line_colors,
                 type = self$type,
                 initiator = self$initiator,
                 generators = self$generators,
@@ -209,7 +180,6 @@ fractal_l_generate = R6Class(
                   self$start_x,
                   self$start_y,
                   self$line_length,
-                  self$line_width,
                   self$angle_current,
                   self$type,
                   generation_line_color
@@ -230,10 +200,6 @@ fractal_l_generate = R6Class(
                   line_length = self$line_length,
                   length_decay = self$length_decay,
                   min_length = self$min_length,
-                  line_width = self$line_width,
-                  width_decay = self$width_decay,
-                  min_width = self$min_width,
-                  line_colors = self$line_colors,
                   type = self$type,
                   initiator = self$initiator,
                   generators = self$generators,
@@ -264,7 +230,6 @@ fractal_l_generate = R6Class(
                   self$start_x,
                   self$start_y,
                   self$line_length,
-                  self$line_width,
                   self$angle_current,
                   self$type,
                   generation_line_color
@@ -283,10 +248,6 @@ fractal_l_generate = R6Class(
                     line_length = self$line_length,
                     length_decay = self$length_decay,
                     min_length = self$min_length,
-                    line_width = self$line_width,
-                    width_decay = self$width_decay,
-                    min_width = self$min_width,
-                    line_colors = self$line_colors,
                     type = self$type,
                     initiator = self$initiator,
                     generators = self$generators,
@@ -307,11 +268,6 @@ fractal_l_generate = R6Class(
                 self$line_length = self$line_length * self$length_decay
                 if (self$line_length < self$min_length) {
                   self$line_length = self$min_length
-                }
-                
-                self$line_width <- self$line_width * self$width_decay
-                if (self$line_width < self$min_width) {
-                  #self$line_width = self$min_width
                 }
                 
                 generator_number_temp <- 1
@@ -338,7 +294,6 @@ fractal_l_generate = R6Class(
                     self$start_x,
                     self$start_y,
                     self$line_length,
-                    self$line_width,
                     angle_right,
                     self$type,
                     generation_line_color
@@ -357,10 +312,6 @@ fractal_l_generate = R6Class(
                       line_length = self$line_length,
                       length_decay = self$length_decay,
                       min_length = self$min_length,
-                      line_width = self$line_width,
-                      width_decay = self$width_decay,
-                      min_width = self$min_width,
-                      line_colors = self$line_colors,
                       type = self$type,
                       initiator = self$initiator,
                       generators = self$generators,
@@ -379,7 +330,6 @@ fractal_l_generate = R6Class(
                     self$start_x,
                     self$start_y,
                     self$line_length,
-                    self$line_width,
                     angle_left,
                     self$type,
                     generation_line_color
@@ -398,10 +348,6 @@ fractal_l_generate = R6Class(
                       line_length = self$line_length,
                       length_decay = self$length_decay,
                       min_length = self$min_length,
-                      line_width = self$line_width,
-                      width_decay = self$width_decay,
-                      min_width = self$min_width,
-                      line_colors = self$line_colors,
                       type = self$type,
                       initiator = self$initiator,
                       generators = self$generators,
@@ -413,13 +359,6 @@ fractal_l_generate = R6Class(
                   self$fractal_lines = rbind(self$fractal_lines,
                                              next_generation$fractal_lines)
                 }
-                
-                # self$angle_current <-
-                #   next_generation$angle_current
-                # self$start_x <-
-                #   next_generation$start_x
-                # self$start_y <-
-                #   next_generation$start_y
                 
               } else{
                 if (fractal_instruction_char == '+') {
@@ -454,10 +393,6 @@ fractal_l = R6Class(
     line_length = NA_character_,
     length_decay = NA_real_,
     min_length = NA_real_,
-    line_width = NA_character_,
-    width_decay = NA_real_,
-    min_width = NA_real_,
-    line_colors = list(),
     fractal_lines = data.frame(),
     type = NA_character_,
     initiator = NA_character_,
@@ -475,10 +410,6 @@ fractal_l = R6Class(
                           generator_number = 1,
                           length_decay = 0.7,
                           min_length = 0.25,
-                          line_width = 1,
-                          width_decay = 1,
-                          min_width = 0.25,
-                          line_colors = c('#000000'),
                           generation_max = 2) {
       
       
@@ -487,12 +418,7 @@ fractal_l = R6Class(
       self$angle_current = angle_current
       self$length_decay = length_decay
       self$min_length = min_length
-      
-      self$line_width = line_width
-      self$width_decay = width_decay
-      self$min_width = min_width
-      
-      self$initiator <- initiator
+       self$initiator <- initiator
       self$generators <- generators
       self$generator_number <- generator_number
       self$generation_max <- generation_max
@@ -511,10 +437,6 @@ fractal_l = R6Class(
         line_length = self$line_length,
         length_decay = self$length_decay,
         min_length = self$min_length,
-        line_width = self$line_width,
-        width_decay = self$width_decay,
-        min_width = self$min_width,
-        line_colors = self$line_colors,
         type = self$type,
         initiator = self$initiator,
         generators = self$generators,
@@ -536,7 +458,6 @@ fractal_l = R6Class(
 
 # Fractal instructions
 
-#lSystem$fractal_lines$line_width
 
 l_names = c(
   'page 8',
@@ -644,24 +565,6 @@ l_start_angles = c(90,
 
 
 
-l_colors = c(c("#000000"),
-             c("#000000"),
-             c("#000000"),
-             c("#000000"),
-             c("#000000"),
-             c("#000000"),
-             c("#000000"),
-             c("#000000"),
-             c("#000000"),
-             c("#000000"),
-             c("#000000"),
-             c("#000000"),
-             c("#000000"),
-             c("#000000"),
-             c("#000000"),
-             c("#000000"),
-             c("#000000")
-)
 
 l_systems <-
   data.frame(l_names,
@@ -673,9 +576,7 @@ l_systems <-
 
 plot_fractal_l <- function(l_systems_row_num, l_systems_max_generation){
   
-  #l_systems_row_num <- 15
-  #l_systems_max_generation <- 6
-  
+
   lSystem = fractal_l$new(
     line_length = 10,
     angle_delta = l_systems$l_angles[l_systems_row_num],
@@ -685,10 +586,6 @@ plot_fractal_l <- function(l_systems_row_num, l_systems_max_generation){
     generator_number = 1,
     length_decay = 0.7,
     min_length = 0.25,
-    line_width = .25,
-    width_decay = 0.2,
-    min_width = 0.000001,
-    line_colors = l_colors[l_systems_row_num],
     generation_max = l_systems_max_generation
   )
   lSystem$plotf()

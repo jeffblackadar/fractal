@@ -19,9 +19,21 @@ source("fractal_l.R")
 #plot_fractal_l(l_systems_row_num=6,l_systems_max_generation=4)
 ```
 
-```{r}
-plot_fractal_l(l_systems_row_num=7,l_systems_max_generation=4)
+```{r include=FALSE}
+row_num <- 7
+max_generation <- 4
 ```
+# Koch Curve
+##### Generation n = `r (max_generation)`
+##### Angle = `r (l_systems$l_angles[row_num])`
+##### Initiator = `r (l_systems$l_initiators[row_num])`
+##### Generators = `r (l_systems$l_F_generators[row_num])`
+##### `r (l_systems$l_names[row_num])`
+ `r (l_systems$l_f_generators[row_num])`
+```{r echo=FALSE}
+plot_fractal_l(l_systems_row_num=row_num,l_systems_max_generation=max_generation)
+```
+
 ```{r}
 #plot_fractal_l(l_systems_row_num=8,l_systems_max_generation=4)
 ```
@@ -30,11 +42,17 @@ plot_fractal_l(l_systems_row_num=7,l_systems_max_generation=4)
 #plot_fractal_l(l_systems_row_num=9,l_systems_max_generation=5)
 ```
 
-```{r}
-l_systems_row_num <- 10
-l_systems_max_generation <- 3
+```{r include=FALSE}
+row_num <- 10
+max_generation <- 4
 ```
-# Generation n = `r (l_systems_max_generation)`
-```{r}
-plot_fractal_l(l_systems_row_num=10,l_systems_max_generation=3)
+# Koch Curve
+##### Generation n = `r (max_generation)`
+##### Angle = `r (l_systems$l_angles[row_num])`
+##### Initiator = `r (l_systems$l_initiators[row_num])`
+##### Generators = `r (l_systems$l_F_generators[row_num])`
+##### `r (l_systems$l_names[row_num])`
+ `r (l_systems$l_f_generators[row_num])`
+```{r echo=FALSE}
+plot_fractal_l(l_systems_row_num=row_num,l_systems_max_generation=max_generation)
 ```
