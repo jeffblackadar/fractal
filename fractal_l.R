@@ -509,7 +509,7 @@ l_F_generators = c(
   'L+R+',
   'R+L+R',
   'L+R++R-L--LL-R+',
-  '',
+  'LL-R-R+L+L-R-RL+R+LLR-L+R+LL+R-LR-R-L+L+RR-',
   'F-F++F-F',
   'B'
 )
@@ -526,7 +526,7 @@ l_f_generators = c('',
                    '-L-R',
                    'L-R-L',
                    '-L+RR++R+L--L-R',
-                   '',
+                   'LL-R-R+L+LR+L-RR-L-R+LRR-L-RL+L+R-R-L+L+RR',
                    '',
                    '')
 l_angles = c(90,
@@ -557,7 +557,7 @@ l_start_angles = c(90,
                    90,
                    90,
                    90,
-                   90,
+                   180,
                    90,
                    90,
                    0,
@@ -590,3 +590,4 @@ plot_fractal_l <- function(l_systems_row_num, l_systems_max_generation){
   )
   lSystem$plotf()
 }
+

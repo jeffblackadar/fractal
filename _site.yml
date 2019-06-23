@@ -1,0 +1,13 @@
+name: "L System Fractals in R using R6 classes"
+output_dir: "docs"
+navbar:  
+  title: "L System Fractals in R using R6 classes"
+  left:  # you can also use 'right'
+    - text: "Home"
+      href: index.html  # don't link to the .Rmd file
+    - text: "Koch Islands"
+      href: examples_1.html
+    - text: "Koch Curves"
+      href: examples_2.html    
+    - text: "More Curves"
+      href: examples_3.html

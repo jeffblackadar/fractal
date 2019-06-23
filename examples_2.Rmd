@@ -1,0 +1,108 @@
+---
+title: "L System Fractals in R using R6 classes - Examples, Koch Curves"
+output: html_document
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'examples_2.html'))})
+---
+```{r}
+source("fractal_l.R")
+```
+
+
+```{r include=FALSE}
+row_num <- 5
+max_generation <- 3
+```
+# Koch Curve
+##### Generation n = `r (max_generation)`
+##### Angle = `r (l_systems$l_angles[row_num])`
+##### Initiator = `r (l_systems$l_initiators[row_num])`
+##### Generator(s) = `r (l_systems$l_F_generators[row_num])`
+##### `r (l_systems$l_f_generators[row_num])`
+##### `r (l_systems$l_names[row_num])`
+```{r echo=FALSE}
+plot_fractal_l(l_systems_row_num=row_num,l_systems_max_generation=max_generation)
+```
+
+
+```{r include=FALSE}
+row_num <- 6
+max_generation <- 4
+```
+# Koch Curve
+##### Generation n = `r (max_generation)`
+##### Angle = `r (l_systems$l_angles[row_num])`
+##### Initiator = `r (l_systems$l_initiators[row_num])`
+##### Generator(s) = `r (l_systems$l_F_generators[row_num])`
+##### `r (l_systems$l_f_generators[row_num])`
+##### `r (l_systems$l_names[row_num])`
+```{r echo=FALSE}
+plot_fractal_l(l_systems_row_num=row_num,l_systems_max_generation=max_generation)
+```
+
+
+```{r include=FALSE}
+row_num <- 7
+max_generation <- 4
+```
+# Koch Curve
+##### Generation n = `r (max_generation)`
+##### Angle = `r (l_systems$l_angles[row_num])`
+##### Initiator = `r (l_systems$l_initiators[row_num])`
+##### Generator(s) = `r (l_systems$l_F_generators[row_num])`
+##### `r (l_systems$l_f_generators[row_num])`
+##### `r (l_systems$l_names[row_num])`
+```{r echo=FALSE}
+plot_fractal_l(l_systems_row_num=row_num,l_systems_max_generation=max_generation)
+```
+
+
+```{r include=FALSE}
+row_num <- 8
+max_generation <- 4
+```
+# Koch Curve
+##### Generation n = `r (max_generation)`
+##### Angle = `r (l_systems$l_angles[row_num])`
+##### Initiator = `r (l_systems$l_initiators[row_num])`
+##### Generator(s) = `r (l_systems$l_F_generators[row_num])`
+##### `r (l_systems$l_f_generators[row_num])`
+##### `r (l_systems$l_names[row_num])`
+```{r echo=FALSE}
+plot_fractal_l(l_systems_row_num=row_num,l_systems_max_generation=max_generation)
+```
+
+
+```{r include=FALSE}
+row_num <- 9
+max_generation <- 5
+```
+# Koch Curve
+##### Generation n = `r (max_generation)`
+##### Angle = `r (l_systems$l_angles[row_num])`
+##### Initiator = `r (l_systems$l_initiators[row_num])`
+##### Generator(s) = `r (l_systems$l_F_generators[row_num])`
+##### `r (l_systems$l_f_generators[row_num])`
+##### `r (l_systems$l_names[row_num])`
+```{r echo=FALSE}
+plot_fractal_l(l_systems_row_num=row_num,l_systems_max_generation=max_generation)
+```
+
+
+```{r include=FALSE}
+row_num <- 10
+max_generation <- 4
+```
+# Koch Curve
+##### Generation n = `r (max_generation)`
+##### Angle = `r (l_systems$l_angles[row_num])`
+##### Initiator = `r (l_systems$l_initiators[row_num])`
+##### Generator(s) = `r (l_systems$l_F_generators[row_num])`
+##### `r (l_systems$l_f_generators[row_num])`
+##### `r (l_systems$l_names[row_num])`
+```{r echo=FALSE}
+plot_fractal_l(l_systems_row_num=row_num,l_systems_max_generation=max_generation)
+```

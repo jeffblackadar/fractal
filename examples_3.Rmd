@@ -1,0 +1,78 @@
+---
+title: "L System Fractals in R using R6 classes - Examples, Koch Curves"
+output: html_document
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'examples_3.html'))})
+---
+```{r}
+source("fractal_l.R")
+```
+
+
+```{r include=FALSE}
+row_num <- 11
+max_generation <- 12
+```
+# Koch Curve
+##### Generation n = `r (max_generation)`
+##### Angle = `r (l_systems$l_angles[row_num])`
+##### Initiator = `r (l_systems$l_initiators[row_num])`
+##### Generator(s) = `r (l_systems$l_F_generators[row_num])`
+##### `r (l_systems$l_f_generators[row_num])`
+##### `r (l_systems$l_names[row_num])`
+```{r echo=FALSE}
+plot_fractal_l(l_systems_row_num=row_num,l_systems_max_generation=max_generation)
+```
+
+
+```{r include=FALSE}
+row_num <- 12
+max_generation <- 6
+```
+# Koch Curve
+##### Generation n = `r (max_generation)`
+##### Angle = `r (l_systems$l_angles[row_num])`
+##### Initiator = `r (l_systems$l_initiators[row_num])`
+##### Generator(s) = `r (l_systems$l_F_generators[row_num])`
+##### `r (l_systems$l_f_generators[row_num])`
+##### `r (l_systems$l_names[row_num])`
+```{r echo=FALSE}
+plot_fractal_l(l_systems_row_num=row_num,l_systems_max_generation=max_generation)
+```
+
+
+```{r include=FALSE}
+row_num <- 13
+max_generation <- 4
+```
+# Hexagonal Gosper curve
+##### Generation n = `r (max_generation)`
+##### Angle = `r (l_systems$l_angles[row_num])`
+##### Initiator = `r (l_systems$l_initiators[row_num])`
+##### Generator(s) = `r (l_systems$l_F_generators[row_num])`
+##### `r (l_systems$l_f_generators[row_num])`
+##### `r (l_systems$l_names[row_num])`
+```{r echo=FALSE}
+plot_fractal_l(l_systems_row_num=row_num,l_systems_max_generation=max_generation)
+```
+
+
+```{r include=FALSE}
+row_num <- 14
+max_generation <- 2
+```
+# Quadratic Gosper curve
+# I don't have the pattern right.
+##### Generation n = `r (max_generation)`
+##### Angle = `r (l_systems$l_angles[row_num])`
+##### Initiator = `r (l_systems$l_initiators[row_num])`
+##### Generator(s) = `r (l_systems$l_F_generators[row_num])`
+##### `r (l_systems$l_f_generators[row_num])`
+##### `r (l_systems$l_names[row_num])`
+```{r echo=FALSE}
+plot_fractal_l(l_systems_row_num=row_num,l_systems_max_generation=max_generation)
+```
+
