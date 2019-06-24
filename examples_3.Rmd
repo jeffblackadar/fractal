@@ -65,7 +65,6 @@ row_num <- 14
 max_generation <- 3
 ```
 # Quadratic Gosper curve
-# I don't have the pattern right.
 ##### Generation n = `r (max_generation)`
 ##### Angle = `r (l_systems$l_angles[row_num])`
 ##### Initiator = `r (l_systems$l_initiators[row_num])`
