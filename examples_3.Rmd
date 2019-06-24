@@ -62,7 +62,7 @@ plot_fractal_l(l_systems_row_num=row_num,l_systems_max_generation=max_generation
 
 ```{r include=FALSE}
 row_num <- 14
-max_generation <- 2
+max_generation <- 3
 ```
 # Quadratic Gosper curve
 # I don't have the pattern right.

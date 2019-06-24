@@ -526,7 +526,7 @@ l_f_generators = c('',
                    '-L-R',
                    'L-R-L',
                    '-L+RR++R+L--L-R',
-                   'LL-R-R+L+LR+L-RR-L-R+LRR-L-RL+L+R-R-L+L+RR',
+                   '+LL-R-R+L+LR+L-RR-L-R+LRR-L-RL+L+R-R-L+L+RR',
                    '',
                    '')
 l_angles = c(90,
