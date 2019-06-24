@@ -1,5 +1,0 @@
-name: "fractal"
-output_dir: "docs"
-output:
-  html_document:
-theme: jekyll-theme-leap-day
